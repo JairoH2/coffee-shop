@@ -92,9 +92,14 @@ li{
     z-index: -1;
 }
 
-.nav__logo{
+.nav__logo-desktop{
+    display: block;
     background-color: var(--color-principal);
     border-radius: 50%;
+}
+
+.nav__logo-mobile{
+    display: none;
 }
 
 .second-list__icons{
@@ -110,6 +115,51 @@ li{
 
 /*Responsive*/
 @media screen and (max-width: 768px) {
-    
-}
+    .nav{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-principal);
+        position: fixed;
+        margin: 30px 0 0 0;
+        width: 100%;
+        gap: 25px;
+        height: 100vh;
+    }
 
+    .nav__first-list,
+    .nav__second-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0;
+        width: 100%;
+        padding: 0 25px;
+        gap: 25px;
+        background-color: transparent;
+    }
+
+    .nav__first-list {
+        padding-top: 25px;
+    }
+    
+    .nav__second-list {
+        padding-bottom: 25px;
+    }
+
+    .nav__first-list::after,
+    .nav__second-list::before{
+        display: none;
+    }
+    
+    .nav__logo-desktop{
+        display: none;
+    }
+
+    .nav__logo-mobile{
+        display: block;
+        width: 70px;
+        position: relative;
+        top: 10px;
+        left: 10px;
+    }
+}
