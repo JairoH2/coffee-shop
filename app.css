@@ -123,6 +123,7 @@ li{
     margin: 25px 25px 0 25px;
     grid-template-columns: 1fr 4fr 1fr;
     align-items: center;
+    gap: 2rem;
 }
 
 .nav-mobile__search{
@@ -146,7 +147,7 @@ li{
 }
 
 .nav-mobile__shop img{
-    width: 50px;
+    width: 40px;
 }
 
 .nav__logo-mobile{
