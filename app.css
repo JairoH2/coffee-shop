@@ -176,6 +176,8 @@ li{
 
     .nav label{
         display: block;
+        opacity: 0;
+        transition-duration: 0.2s;
     }
 
     .nav{
@@ -188,7 +190,7 @@ li{
         gap: 25px;
         height: 100vh;
         left: -100%;
-        transition-duration: 0.3s;
+        transition-duration: 0.5s;
         top: 0;
         align-items: flex-end;
     }
@@ -252,5 +254,10 @@ li{
     #icon__menu:checked ~ .nav{
         left: 0;
         top: 0;
+    }
+
+    #icon__menu:checked ~ .nav label{
+        opacity: 1;
+        transition-duration: 2s;
     }
 }
