@@ -188,7 +188,7 @@ li{
         gap: 25px;
         height: 100vh;
         left: -100%;
-        transition-duration: 0.1s;
+        transition-duration: 0.3s;
         top: 0;
         align-items: flex-end;
     }
