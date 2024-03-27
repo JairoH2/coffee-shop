@@ -1,9 +1,11 @@
 /*Variables Globales*/
 :root {
     --font-principal: "Oswald", sans-serif;
+    --font-secondary: "Poppins", sans-serif;
     --color-white: #fff;
     --bg-color: #F5F2EB;
     --color-principal: #343434;
+    --color-text: #402e27;
 }
 
 .container{
@@ -41,7 +43,23 @@ img{
 li{
     list-style: none;
 }
-/*Contenido - Menú*/
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+h2{
+    font-size: 2rem;
+    color: var(--color-text);
+}
+
+p{
+    font-family: var(--font-secondary);
+}
+
+/*------------------Contenido - Menú*/
 
 .nav{
     display: grid;
@@ -168,6 +186,33 @@ li{
     display: none;
 }
 
+/*------------------Contenido - Main*/
+
+.hero,
+.about{
+    margin-top: 2.5rem;
+}
+
+.hero h1{
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.hero__img img{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about h2{
+    text-align: center;
+}
+
+.about p{
+    margin-top: 1rem;
+    text-align: center;
+}
+
 /*Responsive*/
 @media screen and (max-width: 768px) {
     .nav-mobile{
@@ -259,5 +304,18 @@ li{
     #icon__menu:checked ~ .nav label{
         opacity: 1;
         transition-duration: 2s;
+    }
+
+    /*Main*/
+    .about p{
+        text-align: start;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.7rem;
     }
 }
