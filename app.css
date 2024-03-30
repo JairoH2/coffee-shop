@@ -4,8 +4,10 @@
     --font-secondary: "Poppins", sans-serif;
     --color-white: #fff;
     --bg-color: #F5F2EB;
+    --bg-color-secondary: #ECE8DD;
     --color-principal: #343434;
     --color-text: #402e27;
+    --color-text-secondary: #736137; 
 }
 
 .container{
@@ -189,8 +191,9 @@ p{
 /*------------------Contenido - Main*/
 
 .hero,
-.about{
-    margin-top: 2.5rem;
+.about,
+.menu{
+    margin-top: 5rem;
 }
 
 .hero h1{
@@ -204,13 +207,65 @@ p{
     margin: 0 auto;
 }
 
-.about h2{
+.about h2,
+.menu h2{
     text-align: center;
 }
 
-.about p{
+.about p:first-of-type,
+.menu-container>p:nth-child(2){
     margin-top: 1rem;
     text-align: center;
+}
+
+.menu{
+    background-color: var(--bg-color-secondary);
+    padding-top: 5rem;
+}
+
+.menu__table{
+    margin: 2rem auto 0 auto;
+    display: grid;
+    column-gap: 4rem;
+    row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+}
+
+.menu__table-item{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 20% 80%;
+}
+
+.menu__table-item__container-img{
+    display: flex;
+    justify-content: center;
+}
+
+.menu__table-item img{
+    width: 40px;
+}
+
+.menu__table-item_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu__table-item_info div{
+    display: flex;
+    gap: 1rem;
+    font-weight: 600;
+    justify-content: space-between;
+}
+
+.menu__table-item_info p{
+    margin-top: 0.2rem;
+}
+
+.menu__table-item_info_price{
+    color: var(--color-text-secondary);
 }
 
 /*Responsive*/
@@ -317,5 +372,11 @@ p{
 
     h2{
         font-size: 1.7rem;
+    }
+
+    /*Menú*/
+    .menu__table{
+        grid-template-columns: repeat(1, 1fr);
+        width: 80%;
     }
 }
